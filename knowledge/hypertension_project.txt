@@ -1,0 +1,36 @@
+Healthcare Hypertension Prediction Project
+
+Project Objective:
+This project demonstrates an end-to-end healthcare machine learning workflow for predicting hypertension using synthetic electronic health record (EHR) data.
+
+Data:
+The project uses synthetic healthcare data stored in a MySQL relational database. The final temporally designed cohort contains 312 patients: 156 hypertension cases and 156 age-matched controls.
+
+Prediction Design:
+The hypertension index date is used as the prediction reference point. Predictor information is restricted to the 365 days preceding the index date. Encounters occurring on or after the index date are excluded to prevent temporal data leakage.
+
+Machine Learning Models:
+Two classification algorithms are evaluated:
+1. Logistic Regression
+2. Random Forest
+
+Validation:
+Train-test splitting and cross-validation are performed at the matched-pair level so that members of the same matched pair do not appear in different data partitions.
+
+Final Model Performance:
+Held-out test ROC-AUC:
+- Logistic Regression: 0.744
+- Random Forest: 0.688
+
+Five-fold cross-validation mean ROC-AUC:
+- Logistic Regression: 0.702
+- Random Forest: 0.701
+
+Interpretation:
+After temporal redesign, logistic regression and random forest showed nearly identical cross-validated discrimination. The apparent advantage of random forest observed in the initial analysis largely disappeared.
+
+Key Methodological Lesson:
+Healthcare machine learning models can show artificially strong predictive performance when predictor variables contain information that would not have been available at the intended prediction time. Rigorous cohort construction, temporal alignment, leakage prevention, and appropriate validation are therefore critical.
+
+Limitations:
+The analysis uses synthetic data and a relatively small temporally eligible cohort. Healthcare information in the 365-day pre-index period is sparse, and most eligible hypertension cases were diagnosed around age 18. The analysis compares only logistic regression and random forest.

@@ -1,0 +1,3 @@
+Model,Accuracy,Precision,Sensitivity,Specificity,F1_Score,Test_ROC_AUC,CV_Mean_AUC,CV_SD_AUC
+Temporal Logistic Regression,0.688,0.615,1.0,0.375,0.762,0.744,0.702,0.105
+Temporal Random Forest,0.641,0.592,0.906,0.375,0.716,0.688,0.701,0.043

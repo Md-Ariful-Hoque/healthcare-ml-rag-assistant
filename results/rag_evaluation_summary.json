@@ -1,0 +1,11 @@
+{
+    "evaluation_set_size": 5,
+    "answerable_questions": 3,
+    "unanswerable_questions": 2,
+    "overall_accuracy": 1.0,
+    "answerable_accuracy": 1.0,
+    "refusal_accuracy": 1.0,
+    "retrieval_hit_at_1": 0.6667,
+    "retrieval_hit_at_3": 1.0,
+    "note": "Preliminary evaluation based on a small five-question test set."
+}
