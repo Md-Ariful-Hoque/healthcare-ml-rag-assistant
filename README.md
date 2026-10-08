@@ -84,3 +84,30 @@ The application runs locally and does not require a paid LLM API.
 ## Disclaimer
 
 This application is intended for research and educational purposes. It does not provide medical diagnosis or treatment recommendations.
+
+## Local Ollama Model Setup
+
+This project uses Ollama to run a language model locally without a paid API key.
+
+### Install and prepare the model
+
+1. Install Ollama from https://ollama.com/
+2. Download the model using `ollama pull llama3.2`.
+3. Verify installation using `ollama list`.
+
+Development configuration:
+
+- Model: `llama3.2:latest`
+- Model ID: `a80c4f17acd5`
+- Approximate model size: 2.0 GB
+- Python Ollama client: `0.6.3`
+
+The model is downloaded separately and is not stored in this repository.
+
+### Run the application
+
+Make sure Ollama is running, then execute `streamlit run app.py`.
+
+Open http://localhost:8501 in your browser.
+
+No paid OpenAI or Hugging Face inference API key is required.
